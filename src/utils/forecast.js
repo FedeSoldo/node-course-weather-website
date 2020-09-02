@@ -9,7 +9,9 @@ const forecast = (latitude, longitude, callback) => {
                 callback(undefined, {
                     description: body.current.weather_descriptions[0],
                     temperature: body.current.temperature,
-                    feelslike: body.current.feelslike
+                    feelslike: body.current.feelslike,
+                    humidity: body.current.humidity,
+                    precipitation: body.current.precip,
                 })
             } else {
                 callback("Invalid parameters for weather app", undefined)
